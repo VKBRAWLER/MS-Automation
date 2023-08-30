@@ -31,6 +31,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Timeline
+
 Day 1 (29/Aug)
 01. Created the app in Next.js and deployed in github.com as [SurveySnap](https://github.com/VKBRAWLER/SurveySnap.git).
 02. Emptied the started template and changed the js to jsx for more functionality => (jsx is a mixture of js and html).
+Day 2 (28/Aug)
+03. Added react-icon for better user experience.
