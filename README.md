@@ -41,3 +41,4 @@ Day 2 (30/Aug)
 04. Added Header with static Sign Up button and Navigation bar.
 Day 3 (31/Aug)
 05. Added a few images from [Freepik](https://www.freepik.com/) by generating images for HomePage.
+06. Used [PhotoShop](https://www.adobe.com/in/products/photoshop.html) to edit the image for better user experience.
