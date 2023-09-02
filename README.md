@@ -42,3 +42,5 @@ Day 2 (30/Aug)
 Day 3 (31/Aug)
 05. Added a few images from [Freepik](https://www.freepik.com/) by generating images for HomePage.
 06. Used [PhotoShop](https://www.adobe.com/in/products/photoshop.html) to edit the image for better user experience.
+Day 4 (02/Sep)
+07. Added HomePage as landing page.
