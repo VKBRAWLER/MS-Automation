@@ -26,7 +26,7 @@ const Home = () => {
               </p>
             </div>
             <Image
-              src="/DisplayImages/Image01.png"
+              src="/img/DisplayImages/Image01.png"
               alt="Survey Image"
               className="mx-auto"
               width={w}
@@ -41,7 +41,7 @@ const Home = () => {
               </p>
             </div>
             <Image
-              src="/DisplayImages/Image02.png"
+              src="/img/DisplayImages/Image02.png"
               alt="Survey Image"
               className="mx-auto"
               width={w}
