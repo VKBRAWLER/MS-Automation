@@ -1,0 +1,16 @@
+[
+    {
+    "user_id": "u01",
+    "FirstName": "Varun",
+    "LastName": "Kharkwal",
+    "membership": "pro",
+    "survey_created": ["survey_1", "survey_2", "survey_3"],
+    "survey_answered": [
+        {
+            
+        }
+    ]
+    
+
+    }
+]

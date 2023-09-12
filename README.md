@@ -42,6 +42,11 @@ Day 2 (30/Aug)
 Day 3 (31/Aug)
 05. Added a few images from [Freepik](https://www.freepik.com/) by generating images for HomePage.
 06. Used [PhotoShop](https://www.adobe.com/in/products/photoshop.html) to edit the image for better user experience.
-Day 5 (02/Sep)
+Day 4 (02/Sep)
 07. Added HomePage as landing page.
+Day 5 (03/Sep)
 08. Added Footer with alias info.
+Day 6 (11/Sep)
+09. Added survey page and removed [google fonts](https://fonts.google.com/) from layout.jsx.
+Day 7 (12/Sep)
+10. Added demo data for suevey, questions and user.
