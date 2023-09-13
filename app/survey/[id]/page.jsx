@@ -1,12 +1,7 @@
-"use client";
-
-import { useParams } from "next/navigation";
-
-const UserProfile = () => {
-  const { id } = useParams();
+import React from 'react'
+const Survey = ({ params }) => {
   return (
-    <>Name = {id}</>
-  );
-};
-
-export default UserProfile;
+    <div>Survey</div>
+  )
+}
+export default Survey

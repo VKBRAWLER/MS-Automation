@@ -1,24 +1,22 @@
 import Head from 'next/head';
 import Image from 'next/image';
-const Home = () => {
-  const w = 400;
+import React from 'react'
+
+const HomePage = () => {
+    const w = 400;
   return (
-    <div>
+    <>
       <Head>
         <title>Welcome to Surveysnap</title>
         <meta name="description" content="Welcome to Surveysnap - Your survey platform" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {/* Header */}
-      <header className="bg-gradient-to-r from-blue-400 to-purple-500 text-white p-6 text-center">
+      <main className="w-full bg-colo">
+      <div className="bg-gradient-to-r from-blue-400 to-purple-500 text-white p-6 text-center">
         <h1 className="text-4xl font-semibold">Welcome to Surveysnap</h1>
         <p className="mt-4 text-xl">Your Survey Platform</p>
-      </header>
-
-      {/* Main Content */}
-      <main className="w-full p-3 bg-colo">
-        <section className="text-center flex justify-between gap-20 flex-wrap md:flex-nowrap">
+      </div>
+        <section className="text-center flex justify-between gap-20 flex-wrap md:flex-nowrap m-5">
             <div className="w-full my-auto">
               <h2 className="text-2xl font-semibold mb-4">About Surveysnap</h2>
               <p className="text-gray-700 px-10">
@@ -33,7 +31,7 @@ const Home = () => {
               height={w}
             />
         </section>
-        <section className="text-center flex justify-between gap-20 flex-wrap flex-row-reverse md:flex-nowrap">
+        <section className="text-center flex justify-between gap-20 flex-wrap flex-row-reverse md:flex-nowrap m-5">
             <div className="w-full my-auto">
               <h2 className="text-2xl font-semibold mb-4">Get Started Today</h2>
               <p className="text-gray-700 px-10">
@@ -49,13 +47,8 @@ const Home = () => {
             />
         </section>
       </main>
+    </>
+  )
+}
 
-      {/* Footer */}
-      <footer className="bg-gray-200 py-4 text-center">
-        <p>&copy; 2023 Surveysnap. All rights reserved.</p>
-      </footer>
-    </div>
-  );
-};
-
-export default Home;
+export default HomePage
