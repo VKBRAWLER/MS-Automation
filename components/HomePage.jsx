@@ -11,12 +11,12 @@ const HomePage = () => {
         <meta name="description" content="Welcome to Surveysnap - Your survey platform" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-full bg-colo">
+      <main className="w-full">
       <div className="bg-gradient-to-r from-blue-400 to-purple-500 text-white p-6 text-center">
         <h1 className="text-4xl font-semibold">Welcome to Surveysnap</h1>
         <p className="mt-4 text-xl">Your Survey Platform</p>
       </div>
-        <section className="text-center flex justify-between gap-20 flex-wrap md:flex-nowrap m-5">
+        <section className="text-center flex justify-center gap-20 flex-wrap md:flex-nowrap m-5">
             <div className="w-full my-auto">
               <h2 className="text-2xl font-semibold mb-4">About Surveysnap</h2>
               <p className="text-gray-700 px-10">
@@ -26,13 +26,14 @@ const HomePage = () => {
             <Image
               src="/img/DisplayImages/Image01.png"
               alt="Survey Image"
-              className="mx-auto w-auto h-auto"
-              width={w}
-              height={w}
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="w-[400px] h-auto"
               priority="primary"
             />
         </section>
-        <section className="text-center flex justify-between gap-20 flex-wrap flex-row-reverse md:flex-nowrap m-5">
+        <section className="text-center flex justify-center gap-20 flex-wrap flex-row-reverse md:flex-nowrap m-5">
             <div className="w-full my-auto">
               <h2 className="text-2xl font-semibold mb-4">Get Started Today</h2>
               <p className="text-gray-700 px-10">
@@ -42,10 +43,10 @@ const HomePage = () => {
             <Image
               src="/img/DisplayImages/Image02.png"
               alt="Survey Image"
-              className="mx-auto w-auto h-auto"
-              width={w}
-              height={w}
-              priority="primary"
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="w-[400px] h-auto"
             />
         </section>
       </main>

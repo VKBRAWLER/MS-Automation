@@ -56,3 +56,4 @@ Day 8 (13/Sep)
 11. Fixed Route rendering by removing it from app/page.jsx to app/layout.jsx.
 Day 9 (16/Sep)
 12. Fixed image warning and added dependencies for next-auth and express.
+13. Created added session from Provider.jsx to connect authentication routes using client ID from [Google client](https://console.cloud.google.com/).
