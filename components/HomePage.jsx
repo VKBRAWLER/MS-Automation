@@ -26,9 +26,10 @@ const HomePage = () => {
             <Image
               src="/img/DisplayImages/Image01.png"
               alt="Survey Image"
-              className="mx-auto"
+              className="mx-auto w-auto h-auto"
               width={w}
               height={w}
+              priority="primary"
             />
         </section>
         <section className="text-center flex justify-between gap-20 flex-wrap flex-row-reverse md:flex-nowrap m-5">
@@ -41,9 +42,10 @@ const HomePage = () => {
             <Image
               src="/img/DisplayImages/Image02.png"
               alt="Survey Image"
-              className="mx-auto"
+              className="mx-auto w-auto h-auto"
               width={w}
               height={w}
+              priority="primary"
             />
         </section>
       </main>

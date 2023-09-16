@@ -6,6 +6,8 @@ First, install all the dependencies:
 ```bash
 npm i
 npm install react-icons --save
+npm install express --save
+npm install next-auth
 ```
 
 Then, run the development server:
@@ -50,3 +52,7 @@ Day 6 (11/Sep)
 09. Added survey page and removed [google fonts](https://fonts.google.com/) from layout.jsx.
 Day 7 (12/Sep)
 10. Added demo data for suevey, questions and user.
+Day 8 (13/Sep)
+11. Fixed Route rendering by removing it from app/page.jsx to app/layout.jsx.
+Day 9 (16/Sep)
+12. Fixed image warning and added dependencies for next-auth and express.
