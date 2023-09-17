@@ -35,7 +35,12 @@ const handler = NextAuth({
                     email: profile.email,
                     username: profile.name.replace(' ', '').toLowerCase(),
                     image: profile.picture,
-                    
+                    password: null,
+                    membership: "basic",
+                    interest_tag: [],
+                    survey_created: 0,
+                    survey_answered: 0,
+                    snap_points: 0,
                 }); 
             }
             return true;

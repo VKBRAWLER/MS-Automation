@@ -36,28 +36,30 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Timeline
 
-Day 1 (29/Aug)
+- Day 1 (29/Aug)
 01. Created the app in Next.js and deployed in github.com as [SurveySnap](https://github.com/VKBRAWLER/SurveySnap.git).
 02. Emptied the started template and changed the js to jsx for more functionality => (jsx is a mixture of js and html).
-Day 2 (30/Aug)
+- Day 2 (30/Aug)
 03. Added react-icon for better user experience.
 04. Added Header with static Sign Up button and Navigation bar.
-Day 3 (31/Aug)
+- Day 3 (31/Aug)
 05. Added a few images from [Freepik](https://www.freepik.com/) by generating images for HomePage.
 06. Used [PhotoShop](https://www.adobe.com/in/products/photoshop.html) to edit the image for better user experience.
-Day 4 (02/Sep)
+- Day 5 (02/Sep)
 07. Added HomePage as landing page.
-Day 5 (03/Sep)
+- Day 6 (03/Sep)
 08. Added Footer with alias info.
-Day 6 (11/Sep)
+- Day 14 (11/Sep)
 09. Added survey page and removed [google fonts](https://fonts.google.com/) from layout.jsx.
-Day 7 (12/Sep)
+- Day 15 (12/Sep)
 10. Added demo data for suevey, questions and user.
-Day 8 (13/Sep)
+- Day 16 (13/Sep)
 11. Fixed Route rendering by removing it from app/page.jsx to app/layout.jsx.
-Day 9 (16/Sep)
+- Day 19 (16/Sep)
 12. Fixed image warning and added dependencies for next-auth and express.
 13. Created added session from Provider.jsx to connect authentication routes using client ID from [Google client](https://console.cloud.google.com/).
 14. Created database routing from [mongoDB](https://www.mongodb.com/atlas) using mongoose and made schema model in models/user.js using [next-auth](https://next-auth.js.org) and added .env crypto salt using [text-crypto](https://github.com/JeevanJoshi4434/text-crypto).
-Day 10 (17/Sep)
+- Day 20 (17/Sep)
 15. Modified Header.jsx to login and use Google Authentication and Callback initiated.
+- Day 21 (18/Sep)
+16. Modified User Schema to save user information in MongoDB and understood RegExp in Mongoose by posting in [StackOverflow](https://stackoverflow.com/questions/77122094/how-to-use-match-in-schema-while-using-mongoose).

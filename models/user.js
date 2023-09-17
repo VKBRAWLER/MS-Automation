@@ -11,10 +11,31 @@ const UserSchema = new Schema({
         required : [true, 'username is required'],
         match: [/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Username invalid, it should contain 8-20 alphanumeric letters and be unique!"], 
     },
+    password: {
+        type: String,
+        match: [/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, "Password invalid, it should contain 8-20 alphanumeric letters and be unique!"],
+        // to know more about match RegExp https://stackoverflow.com/questions/77122094/how-to-use-match-in-schema-while-using-mongoose
+    },
     image: {
         type: String,
     },
-    
+    membership: {
+        type: String,
+        required : [true, 'membership is information is required'],
+    },
+    interest_tag: {
+        type: Array,
+    },
+    survey_created: {
+        type: Number,
+    },
+    survey_answered: {
+        type: Number,
+    },
+    snap_points: {
+        type: Number,
+    },
+
 });
 
 const User = models.User || model("User", UserSchema);
