@@ -1,4 +1,4 @@
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import GoogleProvider from 'next-auth/providers/google';
 
 import User from "@models/user";
@@ -11,14 +11,16 @@ const handler = NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         })
     ],
+    callbacks: {
     async session({ session }) {
         const sessionUser = await User.findOne({
             email: session.user.email
         })
 
-        session.user.id = sessionUser._id.toSring();
+        session.user.id = sessionUser._id.toString();
+        return session;
     },
-    async singIn({ profile }) {
+    async signIn({ profile }) {
         try {
             // serverless  -> lamda  -> dbmongo
             await connectToDB();
@@ -33,6 +35,7 @@ const handler = NextAuth({
                     email: profile.email,
                     username: profile.name.replace(' ', '').toLowerCase(),
                     image: profile.picture,
+                    
                 }); 
             }
             return true;
@@ -40,6 +43,7 @@ const handler = NextAuth({
             console.log(error);
             return false;
         }
+    }
     }
 })
 

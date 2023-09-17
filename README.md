@@ -59,3 +59,5 @@ Day 9 (16/Sep)
 12. Fixed image warning and added dependencies for next-auth and express.
 13. Created added session from Provider.jsx to connect authentication routes using client ID from [Google client](https://console.cloud.google.com/).
 14. Created database routing from [mongoDB](https://www.mongodb.com/atlas) using mongoose and made schema model in models/user.js using [next-auth](https://next-auth.js.org) and added .env crypto salt using [text-crypto](https://github.com/JeevanJoshi4434/text-crypto).
+Day 10 (17/Sep)
+15. Modified Header.jsx to login and use Google Authentication and Callback initiated.

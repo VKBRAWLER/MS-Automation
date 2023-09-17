@@ -2,11 +2,15 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { HiMenu, HiX } from 'react-icons/hi';
+import Image from 'next/image';
+import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
+import Provider from './Provider';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLaptopScreen, setIsLaptopScreen] = useState(true);
-
+  const { data: session } = useSession();
+  const [providers, setProviders] = useState(null);
   // Function to handle window resize
   const handleResize = () => {
     if (window.innerWidth >= 768) {
@@ -24,7 +28,16 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  useEffect(() => {
+    const setUpProvider = async () => {
+      const response = await getProviders();
 
+      setProviders(response);
+    }
+
+    setUpProvider();
+  }, [])
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -118,8 +131,39 @@ const Header = () => {
       )}
 
       {/* Right side: Sign Up Box with Border */}
-      <div className="border-2 border-white rounded-lg px-4 py-2">
-        <button className="text-white">Sign Up</button>
+      <div className="">
+      {session?.user
+      ?
+      <><button 
+      className="text-white border-2 border-white rounded-lg px-4 py-2 bg-purple-800 "
+      onClick={signOut}>
+        Sign Out
+      </button>
+      <Link href="/profile">
+        <Image
+        src={session?.user.image}
+        width={50}
+        height={50}
+        alt='nopi'
+        />
+      </Link></>
+      :
+      <>
+        {providers &&
+              Object.values(providers).map((provider) => (
+                <button
+                  type='button'
+                  key={provider.name}
+                  onClick={() => {
+                    signIn(provider.id);
+                  }}
+                  className='text-white border-2 border-white rounded-lg px-4 py-2 bg-purple-800'
+                >
+                  Sign in
+                </button>
+              ))}
+      </>
+      }
       </div>
     </nav>
   );

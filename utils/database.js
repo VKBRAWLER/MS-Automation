@@ -11,7 +11,7 @@ export const connectToDB = async () => {
     
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
-            dbname: "share_prompt",
+            dbname: "demo",
             useNewUrlParser: true,
             useUnifiedTopology: true,
             // thier use is https://stackoverflow.com/questions/65158360/what-does-usenewurlparser-and-usercreateindex-in-mongoose-connect-do
