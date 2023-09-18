@@ -63,3 +63,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 15. Modified Header.jsx to login and use Google Authentication and Callback initiated.
 - Day 21 (18/Sep)
 16. Modified User Schema to save user information in MongoDB and understood RegExp in Mongoose by posting in [StackOverflow](https://stackoverflow.com/questions/77122094/how-to-use-match-in-schema-while-using-mongoose).
+17. Modified survey/id page to create survey.
