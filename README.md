@@ -64,3 +64,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Day 21 (18/Sep)
 16. Modified User Schema to save user information in MongoDB and understood RegExp in Mongoose by posting in [StackOverflow](https://stackoverflow.com/questions/77122094/how-to-use-match-in-schema-while-using-mongoose).
 17. Modified survey/id page to create survey.
+- Day 22 (19/Sep)
+18. Image insertion system added to survey/id.
