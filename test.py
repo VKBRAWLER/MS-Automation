@@ -1,0 +1,26 @@
+from pynput.mouse import Controller as MouseController, Button
+from pynput.keyboard import Controller as KeyboardController, Key
+import time
+import json
+time.sleep(2)
+mouse = MouseController()
+keyboard = KeyboardController()
+keyboard.press(Key.cmd)
+time.sleep(1)
+keyboard.press(Key.up)
+keyboard.release(Key.up)
+time.sleep(1)
+keyboard.press(Key.left)
+keyboard.release(Key.left)
+time.sleep(1)
+keyboard.release(Key.cmd)
+time.sleep(1)
+exit()
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
