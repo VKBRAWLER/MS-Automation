@@ -6,3 +6,9 @@ for (let i = 0; reward_box.children.length > i; i++) {
     child.getElementsByClassName('mee-icon-AddMedium')[0].click();
   }
 }
+
+  const acc_list = document.getElementById('section_moreProfiles').children[1];
+  for (let i = 0; acc_list.children.length > i; i++) {
+    let child = acc_list.children[0];
+    console.log(child);
+  }
