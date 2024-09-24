@@ -10,58 +10,46 @@ import pygetwindow as gw
 mouse = MouseController()
 keyboard = KeyboardController()
 
-def load_json(file_path):
-  with open(file_path, 'r') as file:
-    data = json.load(file)
-  return data
+# Read the data from the JSON file
+with open('mouse.json', 'r') as f:
+    data = json.load(f)
+
+# Convert lists back to tuples
+account_location = [tuple(lst) for lst in data["account_location"]]
+tab_location = [tuple(lst) for lst in data["tab_location"]]
 
 def position_tabs():
   keyboard.press(Key.cmd)
   time.sleep(0.5)
-  keyboard.press(Key.up)
-  keyboard.release(Key.up)
+  keyboard.tap(Key.up)
   time.sleep(0.5)
-  keyboard.press(Key.left)
-  keyboard.release(Key.left)
+  keyboard.tap(Key.left)
   time.sleep(0.5)
   keyboard.release(Key.cmd)
   time.sleep(0.5)
-  keyboard.press(Key.enter)
-  keyboard.release(Key.enter)
+  keyboard.tap(Key.enter)
   time.sleep(0.5)
   time.sleep(0.5)
-  keyboard.press(Key.enter)
-  keyboard.release(Key.enter)
+  keyboard.tap(Key.enter)
   time.sleep(0.5)
-  keyboard.press(Key.enter)
-  keyboard.release(Key.enter)
+  keyboard.tap(Key.enter)
   time.sleep(0.5)
-  keyboard.press(Key.enter)
-  keyboard.release(Key.enter)
+  keyboard.tap(Key.enter)
   time.sleep(0.5)
 
 def exit_tabs():
   keyboard.press(Key.ctrl)
   time.sleep(0.5)
-  keyboard.press('w')
-  keyboard.release('w')
+  keyboard.tap('w')
   time.sleep(0.5)
-  keyboard.press('w')
-  keyboard.release('w')
+  keyboard.tap('w')
   time.sleep(0.5)
-  keyboard.press('w')
-  keyboard.release('w')
+  keyboard.tap('w')
   time.sleep(0.5)
-  keyboard.press('w')
-  keyboard.release('w')
+  keyboard.tap('w')
   time.sleep(0.5)
   keyboard.release(Key.ctrl)
   time.sleep(0.5)
-  
-account_location = [(1094, 947), (1096, 836), (1097, 723), (1094, 614), (1097, 500), (1098, 388), (1096, 275)]
-exit_location = [(933, 14), (1885, 15), (1892, 545), (942, 541)]
-tab_location = [(323, 58), (1296, 62), (348, 577), (1330, 573)]
-json_data = load_json('./mouse.json')
 
 # start here
 time.sleep(2)
@@ -75,8 +63,7 @@ mouse.click(Button.left)
 # full screen ( make sure the browser opens in minimized mode )
 keyboard.press(Key.cmd)
 time.sleep(0.5)
-keyboard.press(Key.up)
-keyboard.release(Key.up)
+keyboard.tap(Key.up)
 keyboard.release(Key.cmd)
 time.sleep(0.5)
 
@@ -111,11 +98,9 @@ for i in range(2): # 2 times for 8 accounts ( 4 accounts per time )
       random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
       keyboard.type(random_string)
       time.sleep(0.5)
-      keyboard.press(Key.enter)
-      keyboard.release(Key.enter)
+      keyboard.tap(Key.enter)
   exit_tabs()
 
 time.sleep(1)
 # good night
-
-# os.system('shutdown -s')  
+# os.system('shutdown -s')
