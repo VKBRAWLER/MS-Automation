@@ -10,6 +10,14 @@ import pygetwindow as gw
 mouse = MouseController()
 keyboard = KeyboardController()
 
+# Read the data from the JSON file
+with open('mouse.json', 'r') as f:
+  data = json.load(f)
+
+# Convert lists back to tuples
+default_account_location = [tuple(lst) for lst in data["account_location"]]
+default_tab_location = [tuple(lst) for lst in data["tab_location"]]
+
 def open_ms():
   time.sleep(1)
   mouse.position = (1110, 1054)
@@ -32,7 +40,7 @@ def scroll_down():
   mouse.scroll(0, -10)
   time.sleep(0.5)
 
-def open_all_accounts(account_location):
+def open_all_accounts(account_location=default_account_location):
   # Save the window to a variable
   personal = gw.getWindowsWithTitle('Edge')[0]
 
@@ -62,7 +70,7 @@ def position_tabs():
   keyboard.tap(Key.enter)
   time.sleep(0.5)
 
-def search_tabs(tab_location, search_count):
+def search_tabs(search_count=1, tab_location=default_tab_location):
   for i in range(search_count):
     for location in tab_location:
       mouse.position = location

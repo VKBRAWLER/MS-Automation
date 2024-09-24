@@ -3,7 +3,7 @@ import automated as auto
 
 # Read the data from the JSON file
 with open('mouse.json', 'r') as f:
-    data = json.load(f)
+  data = json.load(f)
 
 # Convert lists back to tuples
 account_location = [tuple(lst) for lst in data["account_location"]]
@@ -16,7 +16,8 @@ auto.open_all_accounts(account_location)
 
 for i in range(2): # 2 times for 8 accounts ( 4 accounts per time )
   auto.position_tabs()
-  auto.search_tabs(tab_location, 1)
+  count = 10
+  auto.search_tabs(count, tab_location)
   auto.exit_tabs()
 
 auto.shutdown()
