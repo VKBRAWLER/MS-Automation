@@ -10,14 +10,13 @@ while (True):
     time.sleep(2)
     auto.open_all_accounts()
   elif choice == "3":
-    time.sleep(2)
-    auto.position_tabs()
+    pass
   elif choice == "4":
     count = int(input("Enter the number of times you want to search: "))
     time.sleep(2)
     auto.search_tabs(count)
   elif choice == "5":
     time.sleep(2)
-    auto.exit_tabs()
+    auto.close_tab()
   else:
     break
