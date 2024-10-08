@@ -4,7 +4,6 @@ import time
 import json
 import os
 import pygetwindow as gw
-import random_search as rs
 
 mouse = MouseController()
 keyboard = KeyboardController()
@@ -58,8 +57,7 @@ def maximize():
   keyboard.release(Key.alt)
   time.sleep(0.5)
 
-def search_tabs(count=10, search_bar_location=default_search_bar_location, time_gap=10):
-  word_list = rs.get_search(count)
+def search_tabs(word_list, search_bar_location=default_search_bar_location, time_gap=10):
   for i in range(len(word_list)):
     mouse.position = search_bar_location
     time.sleep(1)

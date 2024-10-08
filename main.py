@@ -1,5 +1,6 @@
 import json
 import automated as auto
+import random_search as rs
 # Read the data from the JSON file
 with open('mouse.json', 'r') as f:
   data = json.load(f)
@@ -18,10 +19,10 @@ auto.full_screen_toggle()
 auto.scroll_down()
 auto.open_all_accounts(account_location)
 auto.full_screen_toggle()
-
+word_list = rs.get_search(count)
 for i in range(len(account_location)+1): # each account separately
   auto.maximize()
-  auto.search_tabs(count, search_bar_location, time_gap)
+  auto.search_tabs(word_list, search_bar_location, time_gap)
   auto.close_tab(account_gap)
 
-# auto.shutdown()
+auto.shutdown()
