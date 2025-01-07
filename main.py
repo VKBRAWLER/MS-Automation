@@ -6,7 +6,7 @@ with open('mouse.json', 'r') as f:
   data = json.load(f)
 
 # Variables
-count = 10
+count = 30
 account_gap = 1
 time_gap = 5
 

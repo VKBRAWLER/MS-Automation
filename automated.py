@@ -69,11 +69,13 @@ def search_tabs(word_list, search_bar_location=default_search_bar_location, time
     time.sleep(time_gap)
 
 def close_tab(account_gap=10):
-  keyboard.press(Key.ctrl)
+  time.sleep(1)
+  keyboard.press(Key.alt)
   time.sleep(0.5)
-  keyboard.tap('w')
+  keyboard.tap(Key.space)
   time.sleep(0.5)
-  keyboard.release(Key.ctrl)
+  keyboard.tap('c')
+  time.sleep(0.5)
   time.sleep(account_gap)
 
 def shutdown():
