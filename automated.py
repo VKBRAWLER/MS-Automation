@@ -8,13 +8,8 @@ import pygetwindow as gw
 mouse = MouseController()
 keyboard = KeyboardController()
 
-# Read the data from the JSON file
-with open('mouse.json', 'r') as f:
-  data = json.load(f)
-
-# Convert lists back to tuples
-default_account_location = [tuple(lst) for lst in data["account_location"]]
-default_search_bar_location = tuple(data["search_bar_location"])
+with open('script.js', 'r') as file:
+  js_script = file.read()
 
 def open_ms():
   time.sleep(1)
@@ -36,7 +31,7 @@ def scroll_down():
   mouse.scroll(0, -10)
   time.sleep(0.5)
 
-def open_all_accounts(account_location=default_account_location):
+def open_all_accounts(account_location):
   # Save the window to a variable
   personal = gw.getWindowsWithTitle('Edge')[0]
   for i in account_location:
@@ -47,7 +42,7 @@ def open_all_accounts(account_location=default_account_location):
     personal.activate() # Activate the window
 
 def maximize():
-  time.sleep(0.5)
+  time.sleep(2)
   keyboard.press(Key.alt)
   time.sleep(0.5)
   keyboard.tap(Key.space)
@@ -57,7 +52,7 @@ def maximize():
   keyboard.release(Key.alt)
   time.sleep(0.5)
 
-def search_tabs(word_list, search_bar_location=default_search_bar_location, time_gap=10):
+def search_tabs(word_list, search_bar_location, time_gap=10):
   for i in range(len(word_list)):
     mouse.position = search_bar_location
     time.sleep(1)
@@ -68,7 +63,7 @@ def search_tabs(word_list, search_bar_location=default_search_bar_location, time
     keyboard.tap(Key.enter)
     time.sleep(time_gap)
 
-def close_tab(account_gap=10):
+def close_tab(account_gap=5):
   time.sleep(1)
   keyboard.press(Key.alt)
   time.sleep(0.5)
@@ -77,6 +72,19 @@ def close_tab(account_gap=10):
   keyboard.tap('c')
   time.sleep(0.5)
   time.sleep(account_gap)
+
+def collect_rewards(devtools_location):
+  time.sleep(3)
+  keyboard.tap(Key.f12)
+  time.sleep(2)
+  mouse.position = devtools_location
+  time.sleep(1)
+  mouse.click(Button.left)
+  time.sleep(1)
+  keyboard.type(js_script)
+  time.sleep(1)
+  keyboard.tap(Key.enter)
+  time.sleep(2)
 
 def shutdown():
   os.system('shutdown -s')

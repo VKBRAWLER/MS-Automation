@@ -1,0 +1,5 @@
+{
+  "profile": ["Default", "Profile 1", "Profile 2", "Profile 3", "Profile 5", "Profile 6"],
+  "search_bar_location": [ 630, 54 ],
+  "devtool_location": [ 1678, 908 ]
+}
